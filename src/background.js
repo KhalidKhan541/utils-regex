@@ -1,0 +1,1 @@
+chrome.runtime.onMessage.addListener((msg, s, resp) => { if(msg.action === 'escape') { const escaped = msg.text.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&'); resp({result: escaped}); } if(msg.action === 'test') { try { resp({result: new RegExp(msg.pattern, msg.flags).test(msg.text)}); } catch(e) { resp({result: false, error: e.message}); } } });

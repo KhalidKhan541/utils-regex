@@ -1,0 +1,1 @@
+﻿export function escape(s){return s.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")}export function isMatch(s,r){return new RegExp(r).test(s)}export function extract(s,r){return s.match(new RegExp(r))||[]}export function replace(s,r,rep){return s.replace(new RegExp(r,"g"),rep)}export function testEmail(s){return/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(s)}
